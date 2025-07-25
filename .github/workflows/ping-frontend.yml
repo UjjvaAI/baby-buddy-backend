@@ -1,0 +1,13 @@
+name: Ping Render Frontend
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render frontend
+        run: curl -s https://baby-buddy-frontend.onrender.com/
